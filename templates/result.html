@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary Report</title>
+</head>
+<body>
+    <div class="container", style="margin-left: 35%;" >
+        <h1>Summary Report</h1>
+        <div class="content", style="padding-top: 5rem;">
+            {{summary|safe }}
+        </div>
+        <br><br>
+    </div>
+    <a href="{% url 'upload_file'%}">Upload another file</a>
+</body>
+</html>

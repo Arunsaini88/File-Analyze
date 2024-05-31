@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+</head>
+<body>
+    <div class="container", style="margin-left: 30%; margin-top: 4rem;">
+        <h1> Upload an Excel/CSV File</h1>
+        <div class="content", style="padding-top: 5rem; padding-left: 5rem;">     
+            {% if error %}
+                <p style="color:red;">{{ error }}</p>
+            {% endif %}
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
